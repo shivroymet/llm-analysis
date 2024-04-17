@@ -182,36 +182,6 @@ Detailed description of your project, its purpose, and its main features.
        ]
 
 
-
-
-## UI DESIGN
-
-![img.png](img.png)
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
-
-
-### CHATBOT WITH RESPONSE
-
-![img_6.png](img_6.png)
-
-
-## Graphs:
-* Black dotted line - average
-* Grey dotted lines - (std + avg) and (std - avg)
-
-### RESPONSE TIME (Seconds)
-
-![img_3.png](img_3.png)
-
-### ENERGY (Watt per hour)
- ![img_4.png](img_4.png)
-
-### MEMORY (MB)
-
-![img_5.png](img_5.png)
-
-
 ## QUESTIONS USED
 1. mmlu dataset (https://huggingface.co/datasets/cais/mmlu)
 
