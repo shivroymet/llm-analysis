@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="llm.css">
+    <script src="llm.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script  type="module" src="node_modules/chart.js/dist/chart.umd.js"></script>
+
+    <script  type="module" src="node_modules/chartjs-plugin-annotation/dist/chartjs-plugin-annotation.min.js"></script>
+
+</head>
+
+<body>
+    <div class="chat-container-main">
+    <div class="chat-container">
+        <div class="chat-header">Query Box</div>
+        <div class="chat-body" id="chatBody">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="model-selection">
+            <div class="options">
+                <label for="modelName">Model Name:</label>
+                <select id="modelName" onchange="loadSecondSelectOptions()">
+                    <option value="" disabled selected>Select Model</option>
+                    <!-- Add more model options as needed -->
+                </select>
+            </div>
+            <div class="options">
+                <label for="parameters">Parameters:</label>
+                <select id="parameters" disabled>
+                    <option value="" disabled>Select Parameters</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" class="user-input" id="userInput" placeholder="Type a message...">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <div class="output-efficiency" id="output-efficiency"></div>
+</div>
+
+<button onclick="toggleCharts()">Compare Models</button> <!-- Button to toggle charts -->
+
+<div class="chart-container" style="display: none;" id="chartContainer">
+    <div class = "div-canvas-container"><canvas id="responseTimeChart"></canvas></div>
+    <div class = "div-canvas-container"><canvas id="memoryUsageChart"></canvas></div>
+    <div class = "div-canvas-container"><canvas id="energyUsageChart"></canvas></div>
+</div>
+</body>
+
+</html>
